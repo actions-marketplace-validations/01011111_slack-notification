@@ -1,11 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: Slack Notification
+description: Send slack notification on success or failure
+author: Yorick <yorick@ctrlalt.dev>
 inputs:
-  milliseconds: # change this
+  slack_webhook_url:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: The slack webhook url to send the payload to
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  main: 'dist/main.js'
