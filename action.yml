@@ -5,6 +5,10 @@ inputs:
   slack_webhook_url:
     required: true
     description: The slack webhook url to send the payload to
+  success:
+    required: true
+    description: Whether the action was successful or not
+    default: 'true'
 runs:
   using: 'node16'
   main: 'dist/main.js'
