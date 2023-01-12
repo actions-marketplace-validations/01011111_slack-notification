@@ -20,7 +20,6 @@ interface SlackBlock {
     }
     value: string
     url: string
-    action_id: string
   }
   elements?: SlackElement[]
 }
@@ -45,8 +44,7 @@ export const generatePayload = (org: string, repo: string, ref: string, sha: str
             text: 'Workflow'
           },
           value: `workflow_${runId}}`,
-          url: `https://github.com/${org}/${repo}/actions/runs/${runId}`,
-          action_id: 'button-action'
+          url: `https://github.com/${org}/${repo}/actions/runs/${runId}`
         }
       },
       {

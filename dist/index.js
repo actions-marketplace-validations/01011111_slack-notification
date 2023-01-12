@@ -85,8 +85,7 @@ const generatePayload = (org, repo, ref, sha, runId, success) => {
                         text: 'Workflow'
                     },
                     value: `workflow_${runId}}`,
-                    url: `https://github.com/${org}/${repo}/actions/runs/${runId}`,
-                    action_id: 'button-action'
+                    url: `https://github.com/${org}/${repo}/actions/runs/${runId}`
                 }
             },
             {
