@@ -1,4 +1,4 @@
-name: Slack Notification
+name: Slacktification
 description: Send slack notification on success or failure
 author: Yorick <yorick@ctrlalt.dev>
 branding:
