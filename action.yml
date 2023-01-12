@@ -1,6 +1,12 @@
 name: Slack Notification
 description: Send slack notification on success or failure
 author: Yorick <yorick@ctrlalt.dev>
+branding:
+  icon: alert-octagon
+  color: red
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
 inputs:
   slack_webhook_url:
     required: true
@@ -9,6 +15,3 @@ inputs:
     required: true
     description: Whether the action was successful or not
     default: 'true'
-runs:
-  using: 'node16'
-  main: 'dist/main.js'
