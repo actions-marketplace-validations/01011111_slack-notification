@@ -21,7 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: ./
+        if: success()
         with:
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          success: ${{ success() }}
+          success: 'true'
+      
+      - uses: ./
+        if: failure()
+        with:
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          success: 'false'
